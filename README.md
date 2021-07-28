@@ -25,7 +25,7 @@ Log file named kafka-pub.log will created in folder configured in application.pr
 Log file named kafka-sub.log will created in folder configured in application.properties 
 
 
-Use http://localhost:8080/micro/manage/health for health from actuator 
+    Use http://localhost:8080/micro/manage/health for health from actuator 
 
     Use http://localhost:8080/micro/manage/metrics for metrics from actuator 
 
