@@ -1,3 +1,6 @@
+<html>
+  <head><meta name="google-site-verification" content="TfQsN70zn6my5jc6i8MpMAw3Ub78KoKEpktUFJ9z3XE" /></head>
+  <body>
 Two microservices, a Spring Boot Web application as Producer, a Java Command line application as Consumer and Kafka as broker. Maven project generates executable jars for both Producer and Consumer.
 
 Start Zookeeper: .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
@@ -28,3 +31,5 @@ Use http://localhost:8080/micro/manage/env for environment info from actuator
 Use http://localhost:8080/micro/manage/beans for spring beans info from actuator  
 
 Application context and actuator context are configured in application.properties
+  </body>
+  </html>
