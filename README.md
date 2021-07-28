@@ -26,9 +26,12 @@ Log file named kafka-sub.log will created in folder configured in application.pr
 
 
 Use http://localhost:8080/micro/manage/health for health from actuator 
-Use http://localhost:8080/micro/manage/metrics for metrics from actuator 
-Use http://localhost:8080/micro/manage/env for environment info from actuator
-Use http://localhost:8080/micro/manage/beans for spring beans info from actuator  
+
+    Use http://localhost:8080/micro/manage/metrics for metrics from actuator 
+
+    Use http://localhost:8080/micro/manage/env for environment info from actuator
+
+    Use http://localhost:8080/micro/manage/beans for spring beans info from actuator  
 
 Application context and actuator context are configured in application.properties
   </body>
