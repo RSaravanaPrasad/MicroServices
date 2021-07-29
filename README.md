@@ -1,6 +1,7 @@
 <html>
   <head><meta name="google-site-verification" content="TfQsN70zn6my5jc6i8MpMAw3Ub78KoKEpktUFJ9z3XE" /></head>
   <body>
+    :gear::gear::gear:
 Two microservices, a Spring Boot Web application as Producer, a Java Command line application as Consumer and Kafka as broker. Maven project generates executable jars for both Producer and Consumer.
 
 Start Zookeeper: .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
@@ -20,25 +21,36 @@ The posted message gets logged in Producer console
 
 Message logged in Consumer console
     
-Log4J as dependency added to pom.xml
+* **Logger Configuration**
     
-Log file path configured in application.properties for both Producer and Consumer.
+    * Log4J as dependency added to pom.xml
     
-Logger level configured in application.properties.    
+    * Log file path configured in application.properties for both Producer and Consumer.
+    
+    * Logger level configured in application.properties.    
 
 Log file named kafka-pub.log will created in folder as configured in application.properties 
 
 Log file named kafka-sub.log will created in folder as configured in application.properties 
 
+* **Actuator Configuration**
+    
+    * Actuator context configured as manage in application.properties
+    
+* **Application Context Configuration**
+    
+  * Application context configured as micro in application.properties
+    
+* **Actuator links**
+    
+  * Use http://localhost:8080/micro/manage/health for health from actuator 
 
-    Use http://localhost:8080/micro/manage/health for health from actuator 
+  * Use http://localhost:8080/micro/manage/metrics for metrics from actuator 
 
-    Use http://localhost:8080/micro/manage/metrics for metrics from actuator 
+  * Use http://localhost:8080/micro/manage/env for environment info from actuator
 
-    Use http://localhost:8080/micro/manage/env for environment info from actuator
+  * Use http://localhost:8080/micro/manage/beans for spring beans info from actuator  
 
-    Use http://localhost:8080/micro/manage/beans for spring beans info from actuator  
 
-Application context and actuator context are configured in application.properties
   </body>
   </html>
