@@ -9,14 +9,14 @@ Start kafka: .\bin\windows\kafka-server-start.bat .\config\server.properties
 
 Create topic "microTopic" and group "groupMicroTopic" 
 
-Run Producer: java -jar command on the jar from /target folder. This starts the Spring REST controller. 
+Run Producer: java -jar command on the jar from producer /target folder. This starts the Spring REST controller. 
 
-Run consumer: java -jar command on the jar from /target folder. This starts the consumer
+Run consumer: java -jar command on the jar from consumer /target folder. This starts the consumer
 
 POST a string message using Postman
 Use http://127.0.0.1:8080/micro/produce/message to Post a message
 
-Message logged in Producer console 
+The posted message gets logged in Producer console 
 
 Message logged in Consumer console
 
