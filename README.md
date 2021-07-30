@@ -41,7 +41,7 @@ Log file named kafka-sub.log will created in folder as configured in application
     
   * Application context configured as micro in application.properties
     
-* **Actuator links**
+* **Actuator links for Producer**
     
   * Use http://localhost:8080/micro/manage/health for health from actuator 
 
@@ -50,6 +50,10 @@ Log file named kafka-sub.log will created in folder as configured in application
   * Use http://localhost:8080/micro/manage/env for environment info from actuator
 
   * Use http://localhost:8080/micro/manage/beans for spring beans info from actuator  
+
+    * **Actuator links for Consumer**
+    
+  * Use http://localhost:8085/micro/manage/health for health from actuator 
 
 
   </body>
