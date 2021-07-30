@@ -2,7 +2,8 @@
   <head><meta name="google-site-verification" content="TfQsN70zn6my5jc6i8MpMAw3Ub78KoKEpktUFJ9z3XE" /></head>
   <body>
     :gear::gear::gear:
-Two microservices, a Spring Boot Web application as Producer, a Java Command line application as Consumer and Kafka as broker. Maven project generates executable jars for both Producer and Consumer.
+Two microservices, 
+    a Spring Boot Web application as :gear:Producer, a Java Command line application as :gear:Consumer and :gear:Kafka as broker. Maven project generates executable jars for both Producer and Consumer.
 
 Start Zookeeper: .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 
