@@ -54,7 +54,7 @@ Log file named kafka-sub.log will created in folder as configured in application
 
 * **Actuator links for Consumer**
     
-  * Use http://localhost:8085/micro/manage/health for health from actuator 
+  * Use http://localhost:8085/manage/health for health from actuator 
 
 
   </body>
