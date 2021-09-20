@@ -30,9 +30,9 @@ Message logged in Consumer console
     
     * Logger level configured in application.properties.    
 
-Log file named kafka-pub.log will created in folder as configured in application.properties 
+Log file named kafka-pub.log will be created in folder as configured in application.properties 
 
-Log file named kafka-sub.log will created in folder as configured in application.properties 
+Log file named kafka-sub.log will be created in folder as configured in application.properties 
 
 * **Actuator Configuration**
     
