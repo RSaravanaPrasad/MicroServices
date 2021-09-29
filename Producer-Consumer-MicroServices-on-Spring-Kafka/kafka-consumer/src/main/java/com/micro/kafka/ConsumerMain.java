@@ -15,21 +15,16 @@ public class ConsumerMain implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(ConsumerMain.class);
 
-    @KafkaListener(groupId = ApplicationConstant.GROUP_ID_JSON, topics = ApplicationConstant.TOPIC_NAME,
-            containerFactory = ApplicationConstant.KAFKA_LISTENER_CONTAINER_FACTORY)
+    @KafkaListener( groupId = ApplicationConstant.GROUP_ID_JSON,
+                    topics = ApplicationConstant.TOPIC_NAME)
     public void receivedMessage(String message) {
-        logger.info("Message Received using Kafka listener " + message);
+        logger.info("Message Received by Kafka listener " + message);
     }
-
+    
     public static void main( String[] args )
     {
         logger.info("Consumer main started.");
         SpringApplication.run(ConsumerMain.class, args);
-    }
-
-    @KafkaListener(topics = "microTopic")
-    public void processMessage(String content){
-        logger.info("processMessage received : " + content);
     }
 
     @Override
@@ -37,4 +32,3 @@ public class ConsumerMain implements CommandLineRunner {
     }
 
 }
-
