@@ -23,7 +23,7 @@ public class KafkaProducer {
             logger.info("\nPOST Message to topic: "+ ApplicationConstant.TOPIC_NAME+": "+ new java.util.Date().toString() );
             kafkaTemplate.send(ApplicationConstant.TOPIC_NAME, volume+ new java.util.Date().toString() );
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getLocalizedMessage());
         }
         return "json message sent successfully";
     }
@@ -35,7 +35,7 @@ public class KafkaProducer {
             logger.info("\nGET Message to topic: "+ ApplicationConstant.TOPIC_NAME+": " + new java.util.Date().toString() );
             kafkaTemplate.send(ApplicationConstant.TOPIC_NAME, volume);
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e.getLocalizedMessage());
         }
         return "json message sent succuessfully";
     }
