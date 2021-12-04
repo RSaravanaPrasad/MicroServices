@@ -17,27 +17,29 @@ public class KafkaProducer {
     private KafkaTemplate<String, Object> kafkaTemplate;
 
     @PostMapping("/message")
-    public String sendPostMessage(@RequestBody String volume) {
+    public String sendPostMessage(@RequestBody String jsonText) {
 
         try {
-            logger.info("\nPOST Message to topic: "+ ApplicationConstant.TOPIC_NAME+": "+ new java.util.Date().toString() );
-            kafkaTemplate.send(ApplicationConstant.TOPIC_NAME, volume+ new java.util.Date().toString() );
+            logger.info("\nPOSTing message to topic: "+ ApplicationConstant.TOPIC_NAME+": "+ new java.util.Date().toString() );
+            kafkaTemplate.send(ApplicationConstant.TOPIC_NAME, jsonText+ new java.util.Date().toString() );
+            logger.info("\nPOSTed message to topic: "+ ApplicationConstant.TOPIC_NAME+": "+ new java.util.Date().toString() );
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage());
         }
         return "json message sent successfully";
     }
-
+    /*
     @GetMapping("/message")
-    public String sendGetMessage(@RequestBody String volume) {
+    public String sendGetMessage(@RequestBody String jsonText) {
 
         try {
-            logger.info("\nGET Message to topic: "+ ApplicationConstant.TOPIC_NAME+": " + new java.util.Date().toString() );
-            kafkaTemplate.send(ApplicationConstant.TOPIC_NAME, volume);
+            logger.info("\nGET message to topic: "+ ApplicationConstant.TOPIC_NAME+": " + new java.util.Date().toString() );
+            kafkaTemplate.send(ApplicationConstant.TOPIC_NAME, jsonText);
+            logger.info("\nGot message from topic: "+ ApplicationConstant.TOPIC_NAME+": " + new java.util.Date().toString() );
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage());
         }
         return "json message sent succuessfully";
     }
-
+    */
 }
