@@ -16,18 +16,18 @@ public class KafkaProducer {
     @Autowired
     private KafkaTemplate<String, Object> kafkaTemplate;
 
-    @PostMapping("/message")
+    @PostMapping("/message") // http://127.0.0.1:8080/micro/produce/message
     public String sendPostMessage(@RequestBody String jsonText) {
-
         try {
-            logger.info("\nPOSTing message to topic: "+ ApplicationConstant.TOPIC_NAME+": "+ new java.util.Date().toString() );
+            logger.info("\nPOSTing message to topic: "+ ApplicationConstant.TOPIC_NAME+": "+jsonText +" @: "+ new java.util.Date().toString() );
             kafkaTemplate.send(ApplicationConstant.TOPIC_NAME, jsonText+ new java.util.Date().toString() );
-            logger.info("\nPOSTed message to topic: "+ ApplicationConstant.TOPIC_NAME+": "+ new java.util.Date().toString() );
+            logger.info("\nPOSTed message to topic: "+ ApplicationConstant.TOPIC_NAME+": "+jsonText +" @: "+ new java.util.Date().toString() );
         } catch (Exception e) {
             logger.error(e.getLocalizedMessage());
         }
         return "json message sent successfully";
     }
+
     /*
     @GetMapping("/message")
     public String sendGetMessage(@RequestBody String jsonText) {
